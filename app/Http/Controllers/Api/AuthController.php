@@ -79,7 +79,7 @@ class AuthController extends Controller
                 ], 401);
             }
 
-            $user = User::where('email', $request->mobile)->first();
+            $user = User::where('mobile', $request->mobile)->first();
 
             return response()->json([
                 'status' => true,
