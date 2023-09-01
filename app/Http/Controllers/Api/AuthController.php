@@ -60,7 +60,7 @@ class AuthController extends Controller
         try {
             $validateUser = Validator::make($request->all(),
             [
-                'mobile' => 'required|email',
+                'mobile' => 'required',
                 'password' => 'required'
             ]);
 
