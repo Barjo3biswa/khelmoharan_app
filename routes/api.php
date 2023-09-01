@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\AuthController;
+use App\Http\Controllers\Api\getInformationController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -23,4 +24,7 @@ Route::post('/auth/register', [AuthController::class, 'createUser']);
 Route::post('/auth/login', [AuthController::class, 'loginUser']);
 
 Route::get('/get-dropdown-data', [getInformationController::class, 'info'])->middleware('auth:sanctum');
+
+Route::get('/get-user-info', [getInformationController::class, 'sendUserInfo'])->middleware('auth:sanctum');
+
 
